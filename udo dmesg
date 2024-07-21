@@ -1,0 +1,59 @@
+[    0.000000] Linux version 5.15.153.1-microsoft-standard-WSL2 (root@941d701f84f1) (gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.37) #1 SMP Fri Mar 29 23:14:13 UTC 2024
+[    0.000000] Command line: initrd=\initrd.img WSL_ROOT_INIT=1 panic=-1 nr_cpus=16 hv_utils.timesync_implicit=1 console=hvc0 debug pty.legacy_count=0
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Centaur CentaurHauls
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009ffff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000000e0000-0x00000000000e0fff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000001fffff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x0000000000200000-0x00000000f7ffffff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x00000001fc1fffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] DMI not present or invalid.
+[    0.000000] Hypervisor detected: Microsoft Hyper-V
+[    0.000000] Hyper-V: privilege flags low 0xae7f, high 0x3b8030, hints 0xa4e24, misc 0xe0bed7b2
+[    0.000000] Hyper-V Host Build:22621-10.0-3-0.3880
+[    0.000000] Hyper-V: Nested features: 0x3e0101
+[    0.000000] Hyper-V: LAPIC Timer Frequency: 0x1e8480
+[    0.000000] Hyper-V: Using hypercall for remote TLB flush
+[    0.000000] clocksource: hyperv_clocksource_tsc_page: mask: 0xffffffffffffffff max_cycles: 0x24e6a1710, max_idle_ns: 440795202120 ns
+[    0.000001] tsc: Detected 2688.011 MHz processor
+[    0.000008] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.000010] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000012] last_pfn = 0x1fc200 max_arch_pfn = 0x400000000
+[    0.000029] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.000037] last_pfn = 0xf8000 max_arch_pfn = 0x400000000
+[    0.000043] Using GB pages for direct mapping
+[    0.000044] Incomplete global flushes, disabling PCID
+[    0.000247] RAMDISK: [mem 0x03dda000-0x03fe1fff]
+[    0.000250] ACPI: Early table checksum verification disabled
+[    0.000252] ACPI: RSDP 0x00000000000E0000 000024 (v02 VRTUAL)
+[    0.000255] ACPI: XSDT 0x0000000000100000 000044 (v01 VRTUAL MICROSFT 00000001 MSFT 00000001)
+[    0.000259] ACPI: FACP 0x0000000000101000 000114 (v06 VRTUAL MICROSFT 00000001 MSFT 00000001)
+[    0.000263] ACPI: DSDT 0x00000000001011B8 01E191 (v02 MSFTVM DSDT01   00000001 MSFT 05000000)
+[    0.000265] ACPI: FACS 0x0000000000101114 000040
+[    0.000267] ACPI: OEM0 0x0000000000101154 000064 (v01 VRTUAL MICROSFT 00000001 MSFT 00000001)
+[    0.000270] ACPI: SRAT 0x000000000011F349 0003B0 (v02 VRTUAL MICROSFT 00000001 MSFT 00000001)
+[    0.000273] ACPI: APIC 0x000000000011F6F9 0000C8 (v04 VRTUAL MICROSFT 00000001 MSFT 00000001)
+[    0.000274] ACPI: Reserving FACP table memory at [mem 0x101000-0x101113]
+[    0.000276] ACPI: Reserving DSDT table memory at [mem 0x1011b8-0x11f348]
+[    0.000276] ACPI: Reserving FACS table memory at [mem 0x101114-0x101153]
+[    0.000277] ACPI: Reserving OEM0 table memory at [mem 0x101154-0x1011b7]
+[    0.000277] ACPI: Reserving SRAT table memory at [mem 0x11f349-0x11f6f8]
+[    0.000278] ACPI: Reserving APIC table memory at [mem 0x11f6f9-0x11f7c0]
+[    0.000412] Zone ranges:
+[    0.000413]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.000414]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.000415]   Normal   [mem 0x0000000100000000-0x00000001fc1fffff]
+[    0.000416]   Device   empty
+[    0.000417] Movable zone start for each node
+[    0.000417] Early memory node ranges
+[    0.000418]   node   0: [mem 0x0000000000001000-0x000000000009ffff]
+[    0.000418]   node   0: [mem 0x0000000000200000-0x00000000f7ffffff]
+[    0.000419]   node   0: [mem 0x0000000100000000-0x00000001fc1fffff]
+[    0.000420] Initmem setup node 0 [mem 0x0000000000001000-0x00000001fc1fffff]
+[    0.000536] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.000558] On node 0, zone DMA: 352 pages in unavailable ranges
+[    0.009858] On node 0, zone Nor
