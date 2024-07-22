@@ -1,8 +1,9 @@
-export default function getBudgetForCurrentYear(year,income, gdp, capita) {
-  const budget = {
-  [`${year}-income`]: income,
-  [`${year}-gdp`]: gdp,
-  [`${year}-capita`]: capita
-  };
+export default function getBudgetForCurrentYear(year, income, gdp, capita) {
+  const budget = {};
+
+  budget[year + '-income'] = income;
+  budget[year + '-gdp'] = gdp;
+  budget[year + '-capita'] = capita;
+
   return budget;
 }
