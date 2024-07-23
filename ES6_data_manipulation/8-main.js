@@ -1,4 +1,10 @@
-import cleanSet from "./8-clean_set.js";
-
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), 'bon'));
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), ''));
+export default function cleanSet(set, startString) {
+  if (!startString || typeof startString !== 'string') return '';
+  const result = [];
+  set.forEach((value) => {
+    if (value.startsWith(startString)) {
+      result.push(value.substring(startString.length));
+    }
+  });
+  return result.join('-');
+}
