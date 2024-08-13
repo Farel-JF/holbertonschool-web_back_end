@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """This module provides a function to concatenate two strings. It takes two
 string arguments and returns their concatenation as a single string.
