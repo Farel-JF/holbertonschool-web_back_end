@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Module for server pagination using a CSV file."""
+
 import csv
 from typing import List
 import math
@@ -15,7 +16,6 @@ def index_range(page: int, page_size: int) -> tuple:
     start_index = (page - 1) * page_size
     end_index = start_index + page_size
     return (start_index, end_index)
-
 
 class Server:
     """Server class to paginate a dataset of popular baby names."""
@@ -42,12 +42,10 @@ class Server:
         page_size (int): The number of items per page. Default is 10.
         Returns:
         List[List]: A list of rows corresponding to the requested page."""
-        assert isinstance(page, int) and page > 0,
-        assert isinstance(page_size, int) and page_size > 0,
-        start_index, end_index = index_range(page, page_size)
-        dataset = self.dataset()
+        assert isinstance(page, int) and page > 0
+        assert isinstance(page_size, int) and page_size > 0
 
-        if len(dataset) <= start_index:
-            return []
+        dataset = self.dataset()
+        start_index, end_index = index_range(page, page_size)
 
         return dataset[start_index:end_index]
