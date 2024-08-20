@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Module for server pagination using a CSV file."""
-
 import csv
 import math
 from typing import List, Dict, Any
@@ -54,7 +53,8 @@ class Server:
         return dataset[start:stop]
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, Any]:
-        """Retrieves hypermedia pagination information for a page of the dataset.
+        """Retrieves hypermedia pagination information for a page of the
+        dataset.
         Args:
         page (int): The page number (1-indexed). Default is 1.
         page_size (int): The number of items per page. Default is 10.
