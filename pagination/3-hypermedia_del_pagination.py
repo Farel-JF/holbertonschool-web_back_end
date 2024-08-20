@@ -29,6 +29,7 @@ class Server:
         """Dataset indexed by sorting position, starting at 0."""
         if self.__indexed_dataset is None:
             dataset = self.dataset()
+            truncated_dataset = dataset[:1000]
             self.__indexed_dataset = {
                 i: dataset[i] for i in range(len(dataset))
             }
@@ -38,8 +39,8 @@ class Server:
         self, index: int = None, page_size: int = 10
     ) -> Dict[str, Any]:
         """Retrieves a page of the dataset starting from the given index."""
-        assert isinstance(index, int) and index >= 0, "Index must be a non-negative integer"
-        assert isinstance(page_size, int) and page_size > 0, "Page size must be a positive integer"
+        assert isinstance(index, int) and index >= 0,
+        assert isinstance(page_size, int) and page_size > 0,
 
         dataset = self.indexed_dataset()
         data = []
