@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Deletion-resilient hypermedia pagination"""
+"""
+Deletion-resilient hypermedia pagination
+"""
+
 import csv
 from typing import List, Dict, Any
 
@@ -35,8 +38,8 @@ class Server:
         self, index: int = None, page_size: int = 10
     ) -> Dict[str, Any]:
         """Retrieves a page of the dataset starting from the given index."""
-        assert isinstance(index, int) and index >= 0,
-        assert isinstance(page_size, int) and page_size > 0,
+        assert isinstance(index, int) and index >= 0, "Index must be a non-negative integer"
+        assert isinstance(page_size, int) and page_size > 0, "Page size must be a positive integer"
 
         dataset = self.indexed_dataset()
         data = []
