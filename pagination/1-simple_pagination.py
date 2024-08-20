@@ -1,9 +1,20 @@
 #!/usr/bin/env python3
 """Module for server pagination using a CSV file."""
-
 import csv
 from typing import List
-index_range = __import__('0-simple_helper_function').index_range
+import math
+
+
+def index_range(page: int, page_size: int) -> tuple:
+    """Calculates the start and end index for a given page and page size.
+    Args:
+    page (int): The page number (1-indexed).
+    page_size (int): The number of items per page.
+    Returns:
+    tuple: A tuple containing the start index and end index for pagination."""
+    start_index = (page - 1) * page_size
+    end_index = start_index + page_size
+    return (start_index, end_index)
 
 
 class Server:
@@ -33,8 +44,10 @@ class Server:
         List[List]: A list of rows corresponding to the requested page."""
         assert isinstance(page, int) and page > 0,
         assert isinstance(page_size, int) and page_size > 0,
-
-        dataset = self.dataset()
         start_index, end_index = index_range(page, page_size)
+        dataset = self.dataset()
+
+        if len(dataset) <= start_index:
+            return []
 
         return dataset[start_index:end_index]
