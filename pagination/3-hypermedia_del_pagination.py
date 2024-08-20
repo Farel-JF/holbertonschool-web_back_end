@@ -39,22 +39,22 @@ class Server:
         self, index: int = None, page_size: int = 10
     ) -> Dict[str, Any]:
         """Retrieves a page of the dataset starting from the given index."""
-        assert isinstance(index, int) and index >= 0,
-        assert isinstance(page_size, int) and page_size > 0,
+        start_index = index if index is not None else 0
+        end_index = start_index + page_size - 1
+        size_data = len(self.dataset())
 
-        dataset = self.indexed_dataset()
-        data = []
-        current_index = index
-        next_index = index + page_size
+        assert start_index >= 0
+        assert end_index < size_data
 
-        while len(data) < page_size and current_index < len(dataset):
-            if current_index in dataset:
-                data.append(dataset[current_index])
-            current_index += 1
+        current_page = [self.dataset()[i] for i in range(start_index,
+                                                         min(end_index + 1,
+                                                             size_data))]
+
+        next_index = end_index + 1
 
         return {
-            'index': index,
-            'data': data,
+            'index': start_index,
+            'data': current_page,
             'page_size': page_size,
-            'next_index': next_index if len(data) == page_size else None
+            'next_index': next_index
         }
