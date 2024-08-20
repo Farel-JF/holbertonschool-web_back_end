@@ -11,7 +11,6 @@ async def async_generator() -> Generator[float, None, None]:
     The generator will:
     - Wait asynchronously for 1 second before yielding each number.
     - Generate random float numbers between 0 and 10.
-
     Yields:
     float: A random float number between 0 and 10."""
     for i in range(0, 10):
