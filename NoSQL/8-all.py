@@ -2,7 +2,7 @@
 """a Python function that lists all documents"""
 
 
-def list_all(mongo_collection) -> List[Dict]:
+def list_all(mongo_collection):
     """Lists all documents in a MongoDB collection.
     Args:
         mongo_collection: The pymongo collection object.
