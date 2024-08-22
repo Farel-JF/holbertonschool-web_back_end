@@ -22,6 +22,6 @@ if __name__ == "__main__":
         print(f"\tmethod {method}: {count}")
 
     print(collection.count_documents({"method": "GET", "path": "/status"}),
-          "status check")
+    "status check")
 
     client.close()
